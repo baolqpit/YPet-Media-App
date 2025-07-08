@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, {useState} from "react";
+import {useDispatch} from "react-redux";
 import {
     View,
     TextInput,
@@ -8,9 +8,9 @@ import {
     Text,
     ScrollView,
 } from "react-native";
-import { authService } from "../services/authService";
-import { saveToken } from "../utils/tokenStorage";
-import { setCredentials } from "../slice/authSlice";
+import {authService} from "../services/authService";
+import {saveToken} from "../utils/tokenStorage";
+import {setCredentials} from "../slice/authSlice";
 import {styles} from "../styles/loginScreenStyles.tsx";
 
 export default function LoginScreen() {
@@ -20,11 +20,9 @@ export default function LoginScreen() {
 
     const handleLogin = async () => {
         try {
-            const res = await authService.login({ email, password });
+            const res = await authService.login({email, password});
             await saveToken(res.data.token);
-            dispatch(setCredentials(res));
-            Alert.alert("Login Success", "Great!");
-
+            dispatch(setCredentials(res.data));
         } catch (err) {
             Alert.alert("Login failed", "Invalid credentials or network error");
         }
@@ -52,7 +50,7 @@ export default function LoginScreen() {
             />
 
             <View style={styles.buttonContainer}>
-                <Button title="Log In" onPress={handleLogin} color="#2196F3" />
+                <Button title="Log In" onPress={handleLogin} color="#2196F3"/>
             </View>
         </ScrollView>
     );
