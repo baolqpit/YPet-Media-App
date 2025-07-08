@@ -15,3 +15,6 @@ npm install @reduxjs/toolkit react-redux
 
 6. Thư viện hỗ trợ navigation
 npm install @react-navigation/native @react-navigation/native-stack
+
+7. Thư viện hỗ trợ bottom tab navigation
+npm install @react-navigation/bottom-tabs
