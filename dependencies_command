@@ -6,3 +6,12 @@ npm install axios
 
 3. Thư viện hỗ trợ lưu trữ token
 npm install @react-native-async-storage/async-storage
+
+4. Thư viện hỗ trợ safe are cho ứng ụng
+npm install react-native-screens react-native-safe-area-context
+
+5. Thư viện hỗ trợ redux
+npm install @reduxjs/toolkit react-redux
+
+6. Thư viện hỗ trợ navigation
+npm install @react-navigation/native @react-navigation/native-stack
