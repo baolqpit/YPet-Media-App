@@ -1,0 +1,8 @@
+1. Thư viện hỗ trợ các thao tác với .env
+npm install react-native-dotenv
+
+2. Thư viện hỗ trợ gọi api
+npm install axios
+
+3. Thư viện hỗ trợ lưu trữ token
+npm install @react-native-async-storage/async-storage
