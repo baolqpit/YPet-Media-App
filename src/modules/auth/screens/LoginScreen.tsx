@@ -21,7 +21,9 @@ export default function LoginScreen() {
     const handleLogin = async () => {
         try {
             const res = await authService.login({email, password});
-            await saveToken(res.data.token);
+            await saveToken(res.data.accessToken);
+            // console.log(res.data);
+            // console.log("Access Token", res.data.accessToken);
             dispatch(setCredentials(res.data));
         } catch (err) {
             Alert.alert("Login failed", "Invalid credentials or network error");

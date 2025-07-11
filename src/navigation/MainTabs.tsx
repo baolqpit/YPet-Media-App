@@ -1,5 +1,5 @@
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import NewsFeedScreen from "../modules/newsfeed/screens/NewsFeedScreen.tsx";
+import {NewsFeedScreen} from "../modules/newsfeed/screens/NewsFeedScreen.tsx";
 import PetScreen from "../modules/pet/screens/PetScreen.tsx";
 import ProfileScreen from "../modules/profile/screens/ProfileScreen.tsx";
 import VideoScreen from "../modules/video/screens/VideoScreen.tsx";
