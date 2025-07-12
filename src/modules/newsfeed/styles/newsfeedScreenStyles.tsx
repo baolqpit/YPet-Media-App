@@ -14,12 +14,8 @@ export const newsfeedScreenStyles = StyleSheet.create({
         alignItems: "center",
         elevation: 5,
     },
-    fabText: {
-        color: "white",
-        fontSize: 28,
-        fontWeight: "bold",
-    },
     postContainer: {
+        alignItems: "center",
         flexDirection: "row",
         backgroundColor: "#fff",
         borderRadius: 12,

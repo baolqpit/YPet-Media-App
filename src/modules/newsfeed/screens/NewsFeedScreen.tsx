@@ -10,6 +10,7 @@ import {newsfeedScreenStyles} from "../styles/newsfeedScreenStyles.tsx";
 import {User} from "../../auth/types/authTypes.tsx";
 import {userService} from "../../auth/services/userService.tsx";
 import {postCardStyles} from "../styles/postCardStyles.tsx";
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export function NewsFeedScreen() {
     const [posts, setPosts] = useState<NewsfeedResponseDTO[]>([]);
@@ -43,14 +44,22 @@ export function NewsFeedScreen() {
     return (
         <View style={newsfeedScreenStyles.container}>
             <TouchableOpacity style={newsfeedScreenStyles.postContainer} onPress={() => navigation.navigate("CreatePost")}>
-                <Image
-                    source={{
-                        uri: user?.avatar
-                            ? user.avatar
-                            : 'https://th.bing.com/th/id/R.8f5d322e92422a4932357c30a535d20c?rik=IVHHDpGnHyTiRQ&pid=ImgRaw&r=0',
-                    }}
-                    style={postCardStyles.avatar}
-                />
+                {user?.avatar ? (
+                    <Image
+                        source={{
+                            uri: user.avatar,
+                        }}
+                        style={postCardStyles.avatar}
+                    />
+                ) : (
+                    <View style={postCardStyles.avatarPlaceholder}>
+                        <Icon
+                            name="person"
+                            size={24}
+                            color="#000"
+                        />
+                    </View>
+                )}
 
                 <View style={newsfeedScreenStyles.userInfo} >
                     <Text style={newsfeedScreenStyles.userName}>

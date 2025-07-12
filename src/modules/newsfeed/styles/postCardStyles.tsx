@@ -20,6 +20,7 @@ export const postCardStyles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 20,
+        backgroundColor: "#f5f5f5",
     },
     avatarPlaceholder: {
         width: 40,

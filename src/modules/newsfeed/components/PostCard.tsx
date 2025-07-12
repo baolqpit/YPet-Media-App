@@ -1,6 +1,7 @@
 import { View, Text, Image, FlatList } from "react-native";
 import { NewsfeedResponseDTO } from "../types/newsfeedType";
 import {postCardStyles} from "../styles/postCardStyles.tsx";
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 type Props = {
     post: NewsfeedResponseDTO;
@@ -23,11 +24,11 @@ export function PostCard({post}: Props) {
                     <Image source={{uri: post.authorAvatar}} style={postCardStyles.avatar}/>
                 ) : (
                     <View style={postCardStyles.avatarPlaceholder}>
-                        <Image
-                            source={{ uri: 'https://th.bing.com/th/id/R.8f5d322e92422a4932357c30a535d20c?rik=IVHHDpGnHyTiRQ&pid=ImgRaw&r=0' }}
-                            style={postCardStyles.avatar}
+                        <Icon
+                            name="person"
+                            size={24}
+                            color="#000"
                         />
-
                     </View>
                 )}
 
