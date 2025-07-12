@@ -58,11 +58,26 @@ export const postCardStyles = StyleSheet.create({
     },
     imageList: {
         marginTop: 8,
+        marginBottom: 8,
     },
     postImage: {
         width: 200,
         height: 200,
         borderRadius: 10,
         marginRight: 8,
+    },
+    buttonsContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    iconNumbers: {
+        flexDirection: "row",
+        marginRight: 16,
+    },
+    countText: {
+        fontSize: 16,
+        lineHeight: 30,
+        marginLeft: 4,
+        color: "#000",
     },
 });

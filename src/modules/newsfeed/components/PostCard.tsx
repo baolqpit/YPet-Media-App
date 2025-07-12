@@ -1,7 +1,8 @@
 import { View, Text, Image, FlatList } from "react-native";
 import { NewsfeedResponseDTO } from "../types/newsfeedType";
 import {postCardStyles} from "../styles/postCardStyles.tsx";
-import Icon from "react-native-vector-icons/MaterialIcons";
+import EvilIcon from 'react-native-vector-icons/EvilIcons';
+import Icon from "react-native-vector-icons/MaterialIcons"
 
 type Props = {
     post: NewsfeedResponseDTO;
@@ -64,6 +65,30 @@ export function PostCard({post}: Props) {
                     showsHorizontalScrollIndicator={false}
                 />
             )}
+
+            {/* Action Buttons */}
+            <View style={postCardStyles.buttonsContainer}>
+                <View style={postCardStyles.iconNumbers}>
+                    <EvilIcon
+                        name="heart"
+                        size={30}
+                        color="#000"
+                    />
+                    <Text style={postCardStyles.countText}>{post.favouriteCount}</Text>
+                </View>
+                <View style={postCardStyles.iconNumbers}>
+                    <EvilIcon
+                        name="comment"
+                        size={30}
+                        color="#000"
+                    />
+                    <Text style={postCardStyles.countText}>{post.commentCount}</Text>
+                </View>
+                <EvilIcon
+                    name="share-google"
+                    size={30}
+                />
+            </View>
         </View>
     );
 }

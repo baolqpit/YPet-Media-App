@@ -16,4 +16,6 @@ export interface NewsfeedResponseDTO {
     authorAvatar: string;
     createdAt: string;
     publishedAt: string;
+    favouriteCount: number;
+    commentCount: number;
 }
