@@ -71,7 +71,7 @@ export function NewsFeedScreen() {
 
             <FlatList
                 data={posts}
-                keyExtractor={(item) => item._id}
+                keyExtractor={(item) => item.id}
                 renderItem={({ item }) => <PostCard post={item} />}
             />
         </View>

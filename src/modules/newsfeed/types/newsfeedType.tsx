@@ -6,7 +6,7 @@ export interface CreateNewsfeedDTO {
 }
 
 export interface NewsfeedResponseDTO {
-    _id: string;
+    id: string;
     title: string;
     description: string;
     content: string;
